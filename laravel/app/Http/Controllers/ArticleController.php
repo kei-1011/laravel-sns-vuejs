@@ -7,11 +7,15 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller {
 
-        public function index() {
-            $articles = Article::all()->sortByDesc('created_at');
+    public function index() {
+        $articles = Article::all()->sortByDesc('created_at');
 
-            return view('articles.index', compact('articles'));
+        return view('articles.index', compact('articles'));
 
-            // return view('articles.index', ['articles' => $articles]);
+        // return view('articles.index', ['articles' => $articles]);
+    }
+
+    public function create() {
+        return view('articles.create');
     }
 }
