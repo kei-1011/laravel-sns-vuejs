@@ -11,4 +11,5 @@
 |
 */
 
-    Route::get('/', 'ArticleController@index');
+Auth::routes();
+Route::get('/', 'ArticleController@index');
